@@ -28,7 +28,7 @@ for channel in ${channels[@]}; do
 
   curl -fLo tmp.tar.xz "$TAR_URL"
   mkdir -p tmp
-  tar xvf tmp.tar.xz --directory=tmp
+  tar xf tmp.tar.xz --directory=tmp
   mv $(find tmp -name 'programs.sqlite') $channel/
 
   cleanup
